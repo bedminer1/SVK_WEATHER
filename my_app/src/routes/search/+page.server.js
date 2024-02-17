@@ -16,7 +16,6 @@ export const load = async (event) => {
         const res = await fetch(url)
         if (res.ok) {
             const weatherData = await res.json()
-            weatherData.country = getName(weatherData.sys.country)
             return { weatherData, error: "" }
         } else if (res.status === 404) {
             return {

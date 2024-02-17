@@ -9,9 +9,9 @@
 {#if error}
     <p>{error}</p>
 {:else}
-    <div class="w-full h-full flex flex-col justify-center items-center ">
+    <div class="flex flex-col items-center justify-center w-full h-full ">
         <h2 class="text-7xl">{weatherData.name}</h2>
-        <!-- <h3>{weatherData.country}</h3> -->
+        <h3>{weatherData.sys.country}</h3>
 		<p class="description">
 			{weatherData.weather[0]?.description}
 		</p>
